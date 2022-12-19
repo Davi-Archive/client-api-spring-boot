@@ -1,0 +1,10 @@
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Davi','373363689', 2000.0, 2, '1994-05-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Marcos','41661789', 2160.0, 0, '1987-01-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Maria','42627289', 5193.0, 0, '1965-04-09T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Tyler','52626289', 4456.0, 1, '1945-08-29T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Lily','373737389', 8768.0, 4, '1990-04-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Felix','623464289', 6230.0, 2, '1999-05-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Mathil','17474789', 8570.0, 1, '1990-08-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Zizaran','12346789', 1240.0, 6, '1994-06-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Cutedog','51516789', 6710.0, 1, '1998-11-19T02:31:47Z');
+INSERT INTO client (name, cpf, income,children, birth_Date) VALUES ('Manni','414214189', 2240.0, 0, '2000-09-19T02:31:47Z');
