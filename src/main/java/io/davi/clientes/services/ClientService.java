@@ -29,14 +29,14 @@ public class ClientService {
     }
 
     @Transactional(readOnly = true)
-    public ClientDTO findById(Long id) throws Exception {
+    public ClientDTO findById(Long id) {
         Optional<Client> client = repository.findById(id);
         return new ClientDTO(client
                 .orElseThrow(() -> new ResourceNotFoundException("Entity no found with id: " + id)));
     }
 
     @Transactional
-    public ClientDTO update(Long id, ClientDTO dto) throws Exception {
+    public ClientDTO update(Long id, ClientDTO dto) {
         try {
             Client entity = repository.getReferenceById(id);
             copyDTOToEntity(dto, entity);

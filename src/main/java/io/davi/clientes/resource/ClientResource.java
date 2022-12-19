@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/clients")
@@ -33,4 +32,31 @@ public class ClientResource {
     }
 
 
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<ClientDTO> findById(@PathVariable Long id) {
+        ClientDTO client = service.findById(id);
+        return ResponseEntity.ok().body(client);
+
+    }
+
+    @PostMapping
+    public ResponseEntity<ClientDTO> insertOne(@RequestBody ClientDTO dto) {
+        ClientDTO client = service.saveOne(dto);
+        return ResponseEntity.ok().body(client);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<ClientDTO> updateOne(
+            @PathVariable Long id,
+            @RequestBody ClientDTO dto) {
+        ClientDTO obj = service.update(id, dto);
+        return ResponseEntity.ok().body(obj);
+
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<ClientDTO> deleteOneById(@PathVariable Long id) {
+        service.delete(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
